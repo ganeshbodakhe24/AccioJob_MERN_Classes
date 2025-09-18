@@ -26,7 +26,7 @@
 // console.log({oddIndexEle});
 // console.log({evenIndexEle});
 
-// second approach to get even an odd indesed element
+// second approach to get even an odd indexed element
 let arr=[0,1,2,3,4,5,6];
 let str=" ";
 for(let i=0;i<arr.length;i+=2){
