@@ -149,7 +149,7 @@ function firstNonRepeatChar(str){
         if(str.indexOf(str[i])==str.lastIndexOf(str[i])){
             return str[i];
         }
-    }
+    }[]
     return -1;
 }
 // console.log(firstNonRepeatChar(str));
