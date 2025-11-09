@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: grid;
+            width: 100%;
+            height: 500px;
+            border: 1px solid rgb(74, 60, 42);
+            grid-template-columns: 200px 200px;
+            gap: 20px;
+
+        }
+        .parent div {
+           
+            background-color: black;
+            border: 2px solid green;
+            display: block;
+            color: white;
+        }
+
+        .img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent" >
+        <div >
+            <span>1</span>
+        </div>
+         <div style="grid-column-start: 1; grid-column-end: 3;">
+            <span>2</span>
+        </div>
+         <div >
+            <span>3</span>
+        </div>
+         <div >
+            <span>4</span>
+        </div>
+         <div >
+            <span>5</span>
+        </div>
+         <div >
+            <span>6</span>
+        </div>
+        
+        
+    </div>
+
+</body>
+
+</html>
