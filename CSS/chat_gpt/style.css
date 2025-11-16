@@ -1,0 +1,141 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.main{
+    display: flex;
+    flex-direction:row;
+}
+.side_nav{
+    width: 250px;
+    background-color: rgb(24, 24, 24);
+    color:white;
+    box-sizing: border-box;
+    height: 100vh;
+    border-right: 1px solid rgb(68, 68, 68);
+}
+.logo img{
+    margin:2px;
+    width: 30px;
+
+}
+.menu{
+    width: 100%;
+    height: 100%;
+    padding-left:20px;
+    box-sizing: border-box;
+    color:white;
+
+}
+.menu ul{
+    list-style: none;
+
+}
+.menu ul li{
+    padding: 8px;
+    text-decoration: none;
+}
+.menu ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    color:white;
+}
+.menu ul li a:hover{
+    color:rgb(219, 219, 219);
+}
+.side_right{
+    width: 100%;
+    padding-top:7px;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color:rgb(33, 33, 33);
+}
+.right_nav{
+    color:white;
+    margin:10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+}
+.btn{
+    margin:0px 5px ;
+    padding: 7px 15px;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    border-radius:19px;
+    display:inline-block;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    border:none;
+    cursor: pointer;
+}
+.signup{
+    background-color:black;
+    color:white;
+    border: 1px solid rgb(83, 83, 83);
+
+}
+.right_container{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.right_container h2{
+    margin-top: 30px;
+     margin-bottom:20px;
+}
+
+input{
+    width: 80%;
+    height:100%;
+    font-size: 15px;
+    color:white;
+    background-color: rgb(48, 48, 48);
+    border: none;
+    letter-spacing: 1px;
+}
+input:focus{
+    border: none;
+    outline: none;
+}
+.input{
+    margin: 20px;
+    height: 50px;
+    width:80%;
+    max-width: 700px;
+    display: flex;
+    box-sizing: border-box;
+    padding-right: 5px;
+    padding-left: 5px;
+    align-items: center;
+    background-color: rgb(48, 48, 48);
+    justify-content: space-around;
+    border:1px solid rgb(114, 114, 114);
+    border-radius: 25px;
+}
+.search_btn:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+.attach{
+    font-size: 25px;
+      cursor: pointer;
+
+}
+.attach:hover{
+     font-size: 24jpx;
+      cursor: pointer;
+}
+@media  (max-width:500px){
+    .side_nav{
+    display: none;
+}
+}
