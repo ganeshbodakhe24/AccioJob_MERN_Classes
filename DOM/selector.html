@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #colors{
+            height: 100vh;
+            width:100vw;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">this is heading</h1>
+     <h1 class="heading" id="id">this is heading</h1>
+     <div id="colors">
+        This is random div
+     </div>
+    <script>
+        // let data=document.getElementsByClassName("heading");
+        // console.log(data)
+        // for(let i=0;i<data.length;i++){
+        //     data[i].style.color="blue";
+        // }
+
+        // let data=document.querySelectorAll(".heading");
+        // console.log(data);
+        //  for(let i=0;i<data.length;i++){
+        //     data[i].style.color="blue";
+        // }
+
+
+        //  
+        // let data=document.querySelector(".heading");//only first class element will be  selected
+        // console.log(data);
+
+        //  let data=document.querySelector("#id");//only first id  element will be  selected
+        // console.log(data);//actualy we have one id unique in html so no problem
+
+
+
+    //     let colors=document.getElementById("colors");
+    //     let r=0;
+    //     let g=0;
+    //     let b=0;
+    //   let time=  setInterval(()=>{
+    //         if(r<256){
+    //             r++;
+    //         }
+    //         else if(g<256){
+    //             g++;
+    //         }
+    //         else if(b<256){
+    //             b++;
+    //         }
+    //         else{
+    //             clearInterval(time);
+    //         }
+    //         console.log({r,g,b});
+    //         colors.style.background=`linear-gradient(to right, rgb(${r},${g},${b}) ,  rgb(${g},${r},${b}), rgb(${b},${g},${r}),rgb(${g},${r},${b})`;
+    //     },2)
+        
+    //     const colors = document.getElementById("colors");
+
+let hue = 0;
+
+let time = setInterval(() => {
+  hue = (hue + 1) % 360;
+
+  colors.style.background = `
+    linear-gradient(
+      120deg,
+      hsl(${hue}, 100%, 60%),
+      hsl(${hue + 60}, 100%, 60%),
+      hsl(${hue + 120}, 100%, 60%),
+      hsl(${hue + 180}, 100%, 60%)
+    )
+  `;
+}, 20);
+
+       
+
+    </script>
+</body>
+</html>
