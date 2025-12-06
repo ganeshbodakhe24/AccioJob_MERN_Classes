@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(231, 231, 231);
+            width: 100vw;
+            flex-direction: column;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            /* height: 300px; */
+            width: 300px;
+            background-color: white;
+            box-shadow: 2px 2px 10px rgb(195, 195, 195);
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container button {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(5, 127, 161);
+            color: white;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: rgb(4, 106, 134);
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        .container p {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        #msg {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <p id="count">0</p>
+            <button id="incCount">Increase Count</button>
+            <button id="decCount">Decrease Count</button>
+            <button id="reset">Reset</button>
+            <p id="msg">click on buttons</p>
+            
+
+        </div>
+    </div>
+    <script>
+        let incbtn = document.getElementById("incCount");
+        let decbtn = document.getElementById("decCount");
+        let count = document.getElementById("count");
+        let msg = document.getElementById("msg");
+        let num = 0;
+       
+        function updateCountInUI(){
+        count.innerText = num;
+        }
+        updateCountInUI();//initial positon of count
+
+        //reset button
+        document.getElementById("reset").addEventListener("click",()=>{
+            num=0;
+            updateCountInUI();
+        })
+       
+        //change msg
+        function checkMsg(num){
+             if (num > -10 && num < 10) {
+                msg.innerText = "click on buttons";
+            }
+        }
+        // onclick 
+
+        incCount.addEventListener("click", () => {
+            if (num >= 10) {
+                msg.innerText = "can't go beyound this!!!!";
+                return;
+            }
+            num++;
+            checkMsg(num);
+            count.innerText = num;
+        });
+
+        decCount.addEventListener("click", () => {
+           
+            if (num <= -10) {
+                msg.innerText = "can't go below this!!!!";
+                return
+            }
+            num--;
+            checkMsg(num);
+            count.innerText = num;
+        });
+
+
+
+    </script>
+</body>
+
+</html>

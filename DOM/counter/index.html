@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #main{
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(234, 234, 234);
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #counter_div{
+                width: 300px;
+                padding:30px;
+                background-color: white;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        }
+        #count{
+            font-size: 50px;
+            font-weight: bold;
+            margin:10px 0px;
+        }
+        
+        .btns{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        .btns button{
+            padding: 10px 20px ;
+            border-radius: 15px;
+            border:none;
+            font-size: 20px;
+            font-weight:bold;
+            cursor: pointer;
+            color: #979797;
+          background-color: rgb(255, 255, 255);
+
+        }
+        .btns button:hover{
+            background-color: rgb(214, 214, 214);
+            transform: translate(0px, 2px);
+        }
+        .info{
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+        #decbtn{
+            background-color: white;
+        }
+        #incbtn{
+           background: linear-gradient(to bottom, #6f76f9, #1e29ff);
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="counter_div">
+            <h1>Minimal Counter</h1>
+            <p id="count"></p>
+            <div class="btns">
+                <button id="decbtn">-</button>
+                <button id="incbtn">+</button>
+                <button id="reset">Reset</button>
+            </div>
+            <p class="info">Decreament button is disabled at 0 to prevent negative values</p>
+        </div>
+    </div>
+    <script>
+        let count= document.getElementById("count");
+        let incbtn=document.getElementById("incbtn");
+        let decbtn=document.getElementById("decbtn");
+        let num=0;
+
+        function updateCountUI(){
+            count.innerText=num;
+        }
+        updateCountUI();
+        function checkRestriction(){
+                if(num<=0){
+                    decbtn.style.cursor="not-allowed";
+                }
+                else{
+                    decbtn.style.cursor="pointer";
+                }
+
+
+        }
+        document.getElementById("reset").addEventListener("click",()=>{
+            num=0;
+            checkRestriction();
+            updateCountUI();
+        });
+
+        incbtn.addEventListener("click",()=>{
+            num++;
+             checkRestriction();
+            updateCountUI();
+        })
+
+        decbtn.addEventListener("click",()=>{
+            if(num<=0){
+                checkRestriction();
+                return;
+            }
+             num--;
+            updateCountUI();
+        })
+
+    </script>
+</body>
+</html>

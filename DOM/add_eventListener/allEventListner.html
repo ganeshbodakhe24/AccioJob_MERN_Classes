@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="actionbtn">Hover On</button>
+    
+    <script>
+        const actionbtn=document.getElementById("actionbtn");
+    //    click event listener
+        actionbtn.addEventListener("click",function(){
+            console.log("btn click");
+        })
+
+    // mouse enter event listener
+    actionbtn.addEventListener("mouseover",function(){
+        console.log("mouse over on btn")
+    })
+
+    </script>
+</body>
+</html>

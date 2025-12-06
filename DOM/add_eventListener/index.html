@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dangerzon{
+            background-color: brown;
+           height: 300px;
+           width:300px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           color:white;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn"> click Me</button>
+    <p id="para"></p>
+    <div class="dangerzon">
+        <p>Don't enter into danger zone</p>
+    </div>
+    <script>
+        let btn=document.getElementById("btn");
+        let para=document.getElementById("para");
+        btn.addEventListener("click",function(){
+            para.innerText="hii it's ganesh bodakhe";
+        })
+
+        // danger zone
+        let dangerZone=document.getElementsByClassName("dangerzon");
+        console.log(dangerZone)
+        dangerZone[0].addEventListener("mouseover",function(){
+            setInterval(()=>{
+               
+               if(document.body.style.backgroundColor=="blue") {
+                document.body.style.backgroundColor="white";
+               }
+               else{
+                      document.body.style.backgroundColor="blue";
+               }
+            },100)
+        })
+    </script>
+</body>
+</html>
