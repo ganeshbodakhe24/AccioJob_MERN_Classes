@@ -1,0 +1,144 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Parent */
+.parend_div {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Add Todo */
+.add_todo_div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#input_text {
+  width: 320px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 15px;
+}
+
+#input_text:focus {
+  border-color: #4f46e5;
+}
+
+/* Add Button */
+#submit_btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+}
+
+#submit_btn:hover {
+  background: #4338ca;
+}
+
+/* Tabs */
+.tabs_div button {
+  margin: 20px 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: 500;
+}
+
+.tabs_div button:hover {
+  background: #d1d5db;
+}
+
+/* Todo List Container */
+.todo_list {
+  margin: auto;
+  width: 520px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Single Todo */
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #f9fafb;
+  transition: 0.2s;
+}
+
+.todo:hover {
+  background: #f3f4f6;
+}
+
+/* Todo Text */
+.todo p {
+  flex: 1;
+  margin-left: 10px;
+  text-align: left;
+  font-size: 15px;
+  color: #111827;
+}
+
+/* Completed Todo */
+.completed {
+  background: #ecfdf5;
+}
+
+.completed p {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+/* Remove Button */
+#remove_todo_btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+#remove_todo_btn:hover {
+  background: #dc2626;
+}
+
+/* Info Section */
+.info {
+  display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin:auto;
+    gap:3px;
+  font-size: 14px;
+  color: #374151;
+}
+
