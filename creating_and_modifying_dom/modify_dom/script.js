@@ -39,7 +39,6 @@ let remove_btn=document.createElement("button");
 remove_btn.textContent="remove first child";
 remove_btn.id="remove_first_child";
 section.append(remove_btn);
-
 remove_btn.addEventListener("click",()=>{
     if(section.firstChild &&section.firstChild.id!=remove_btn.id){
         section.firstChild.remove();
