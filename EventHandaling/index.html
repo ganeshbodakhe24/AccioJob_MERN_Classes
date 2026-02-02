@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            color: black;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box" id="box">
+         
+    </div>
+    <script>
+     window.addEventListener("mousemove",(e)=>{
+        console.log(e.screenX,e.screenY);
+        console.log(e.clientX,e.clientY);
+        console.log(e.pageX,e.pageY);
+
+     })
+     let box=document.getElementById("box")
+     box.addEventListener("mousemove",(e)=>{
+         console.log(e.offsetX,e.offsetY);
+
+     })
+    </script>
+</body>
+</html>
