@@ -1,0 +1,68 @@
+*{
+    margin:0px;
+    background-color: rgb(1, 22, 51);
+    color:white;
+    padding: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#input_form{
+    text-align: center;
+}
+
+#heading{
+    text-align: center;
+    margin:10px;
+}
+
+#input_form label{
+  
+    font-size: 20px;
+}
+#input_form input,textarea{
+    margin:5px;
+    padding: 3px;
+    width: 350px;
+    border: 1px solid white;
+    font-size: 20px;
+}
+
+
+
+#dataSubmitLoader{
+    margin-top: 20px;
+}
+#searchForm input,button{
+        margin: 10px;
+        padding:10px;
+        border: 1px solid white;
+        font-size: 14px;
+
+}
+
+#searchReasult{
+    margin:30px;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+}
+.data{
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid rgb(255, 250, 250);
+}
+.data p{
+    margin: 4px;
+}
+
+button{
+    cursor: pointer;
+    padding:5px;
+    font-size: 20px;
+    border:1px solid rgb(255, 255, 255);
+    
+}
+
+button:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}

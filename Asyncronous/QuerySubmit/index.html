@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Query</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="heading">Query Form</h1>
+    <form id="input_form">
+        <input type="name" placeholder="Name" required id="name" name="name">
+        <br> 
+        <input type="email" placeholder="Email" required id="email" name="email">
+        <br>
+        <textarea type="text" rows="3" placeholder="Query" required id="query" name="query">
+        </textarea>
+        <br>
+        <button id="submit" type="submit"> Submit</button>
+         <p id="dataSubmitLoader"></p>
+    </form>
+
+
+    <h1>Get Data</h1>
+    <form id="searchForm">
+        <input type="email" name="email" placeholder="Enter Email">
+        <button >Search</button>
+        <span id="searchloader"></span>
+    </form>
+       
+   <div id="searchReasult">
+    
+   </div>
+    
+    <!-- script -->
+     <script src="script.js"></script>
+</body>
+</html>
