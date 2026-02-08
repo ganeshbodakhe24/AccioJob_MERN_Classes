@@ -28,9 +28,9 @@ function fetchUser(user,callback){
 }
 
 
-function afterUserFetch(error,info){
+function afterUserFetch(fo){
     if(error){
-        console.log(error);
+        console.log(erroerror,inr);
     }
     else{
         console.log(info);
