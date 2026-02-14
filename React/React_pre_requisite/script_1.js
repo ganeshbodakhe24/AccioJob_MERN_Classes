@@ -1,4 +1,9 @@
 // import type
+// barrel import 
+// import {sum,union} from "./lib/index.js";
+// sum();
+// union();
+
 
 
 import { hello,count,increment } from "./script.js";//to import module
